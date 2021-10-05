@@ -38,7 +38,12 @@ setInterval(() => {
   lines.forEach((element, index) => {
     let char = element.charAt(0);
     lines[index] = element.substr(1, element.length) + char;
-    console.log(lines[index]);
+    console.log(lines[index] + lines[index]);
+  });
+  lines.forEach((element, index) => {
+    let char = element.charAt(0);
+    lines[index] = element.substr(1, element.length) + char;
+    console.log(lines[index] + lines[index]);
   });
 }, 50);
 
