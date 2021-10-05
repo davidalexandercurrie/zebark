@@ -3,7 +3,7 @@ const { exec } = require('child_process');
 const chalk = require('chalk');
 let count = 0;
 
-let img = `&&&&&&&&&&&&&&&%              ....*/(((((((***,.                  &&&&&&&&&&&&&&
+let img = `  &&&&&&&&&&&&&&&%              ....*/(((((((***,.                  &&&&&&&&&&&&&&
   &&&&&&&&&&&&%                ..****//,,.............                 &&&&&&&&&&&
   &&&&&&&&&&,                ............................                /&&&&&&&&
   &&&&&&&&.               ........,(%&&&&&&&&&&&&&&(...                    *&&&&&&
@@ -39,11 +39,17 @@ setInterval(() => {
   lines.forEach((element, index) => {
     let char = element.charAt(0);
     lines[index] = element.substr(1, element.length) + char;
-    console.log(chalk.yellow(lines[index]) + chalk.blue(lines[index]));
+    console.log(
+      chalk.yellow(chalk.bgMagentaBright(lines[index])) +
+        chalk.black(chalk.bgWhite(lines[index]))
+    );
   });
   lines.forEach((element, index) => {
     let char = element.charAt(0);
     lines[index] = element.substr(1, element.length) + char;
-    console.log(chalk.magenta(lines[index]) + chalk.red(lines[index]));
+    console.log(
+      chalk.magenta(chalk.bgCyan(lines[index])) +
+        chalk.red(chalk.bgBlue(lines[index]))
+    );
   });
 }, 50);
