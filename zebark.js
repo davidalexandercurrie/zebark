@@ -1,5 +1,6 @@
 #! /usr/bin/env node
 const { exec } = require('child_process');
+const chalk = require('chalk');
 let count = 0;
 
 let img = `&&&&&&&&&&&&&&&%              ....*/(((((((***,.                  &&&&&&&&&&&&&&
@@ -38,12 +39,12 @@ setInterval(() => {
   lines.forEach((element, index) => {
     let char = element.charAt(0);
     lines[index] = element.substr(1, element.length) + char;
-    console.log(lines[index] + lines[index]);
+    console.log(chalk.yellow(lines[index]) + chalk.blue(lines[index]));
   });
   lines.forEach((element, index) => {
     let char = element.charAt(0);
     lines[index] = element.substr(1, element.length) + char;
-    console.log(lines[index] + lines[index]);
+    console.log(chalk.green(lines[index]) + chalk.red(lines[index]));
   });
 }, 50);
 

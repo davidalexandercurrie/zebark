@@ -11,5 +11,8 @@
   "license": "ISC",
   "bin": {
     "zebark": "./zebark.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2"
   }
 }
