@@ -44,6 +44,6 @@ setInterval(() => {
   lines.forEach((element, index) => {
     let char = element.charAt(0);
     lines[index] = element.substr(1, element.length) + char;
-    console.log(chalk.green(lines[index]) + chalk.red(lines[index]));
+    console.log(chalk.magenta(lines[index]) + chalk.red(lines[index]));
   });
 }, 50);
